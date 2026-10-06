@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 400px 100px;
+            gap: 20px;
+        }
+        
+        .box {
+            font-size: 25px;
+            border: 2px solid black;
+            gap: 20px;
+        }
+        
+        .header {
+            background-color: lightgoldenrodyellow;
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4; */
+            /* grid-row: 1/4;
+            grid-column: 1/3; */
+            grid-area: 1/1/2/5;
+        }
+        
+        .left-sidebar {
+            background-color: burlywood;
+            grid-area: 2/1/3/2;
+        }
+        
+        .main {
+            background-color: coral;
+            grid-area: 2/2/3/4;
+        }
+        
+        .right-sidebar {
+            background-color: lawngreen;
+            grid-area: 2/4/3/5;
+        }
+        
+        .footer {
+            background-color: darkkhaki;
+            grid-area: 3/1/4/5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box header"> header</div>
+        <div class="box left-sidebar">left-sidebar</div>
+        <div class="box main">main</div>
+        <div class="box right-sidebar">right-sidebar</div>
+        <div class="box footer">footer</div>
+    </div>
+
+</body>
+
+</html>
